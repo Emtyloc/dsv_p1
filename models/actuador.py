@@ -14,8 +14,7 @@ class Actuador(db.Model):
     derecho_porcentual = db.Column(db.Float)
     rol_actuador = db.Column(db.String(20), nullable=False)
 
-    def __init__(self, id, formulario_id, run_rut, rol_actuador: RolActuadorEnum):
-        self.id = id
+    def __init__(self, formulario_id, run_rut, rol_actuador: RolActuadorEnum):
         self.formulario_id = formulario_id
         self.run_rut = run_rut
         self.rol_actuador = rol_actuador.value
